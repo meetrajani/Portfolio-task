@@ -114,7 +114,11 @@ header .header-menu .header-menu-drop li a i {
     font-size: 15px;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    color: #ff7b00 !important;
+    transition: all 0.2s;
+    background-color: #f1f1f1
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
