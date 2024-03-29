@@ -234,6 +234,12 @@
     .content-img img{
         width: 100%;
     }
+    .content-input input{
+        font-size: 13px;
+    }
+    .content-input textarea{
+        font-size: 13px;
+    }
 }
 @media (max-width: 320px){
     .homepage{
@@ -263,5 +269,11 @@
     }
     .content-img img{
         width: 100%;
+    }
+    .content-input input{
+        font-size: 12px;
+    }
+    .content-input textarea{
+        font-size: 12px;
     }
 }
