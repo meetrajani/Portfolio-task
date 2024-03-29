@@ -197,6 +197,9 @@
     }
 
     /* contact */
+    .Contactpage{
+        height: 100%;
+    }
     .content-data{
         width: 100% !important; 
         text-align: center;   
@@ -211,6 +214,9 @@
 }
 
 @media (max-width: 375px){
+    .homepage{
+        height: 100%;
+    }
     .container-fluid button{
         margin-left: 40%;
     }
@@ -219,6 +225,9 @@
         font-size: 13px;
     }
     /* contact */
+    .Contactpage{
+        height: 100%;
+    }
     .form-control{
         padding: 2px 4px !important;
     }
@@ -227,6 +236,9 @@
     }
 }
 @media (max-width: 320px){
+    .homepage{
+        height: 100%;
+    }
     .header-logo img {
         width: 35%;
     }
@@ -243,6 +255,9 @@
         width: 17rem;
     }
     /* contact */
+    .Contactpage{
+        height: 100%;
+    }
     .form-control{
         padding: 1px 4px !important;
     }
