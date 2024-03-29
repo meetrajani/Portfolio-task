@@ -262,7 +262,7 @@
     }
     /* contact */
     .Contactpage{
-        height: 100vh;
+        height: 100%;
     }
     .form-control{
         padding: 1px 4px !important;
