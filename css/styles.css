@@ -1,142 +1,54 @@
 /* header */
 
-header.transparent {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999;
-}
-
-header .container-feild {
-    padding-left: 150px;
-    padding-right: 150px;
-}
-
-header .header-all {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: space-between;
-}
-
-header .header-all .header-logo {
-    align-items: center;
-    display: flex;
-    flex-basis: 20%;
-    flex-shrink: 0;
-}
-
-header .header-all .header-logo .logo a {
-    text-decoration: none;
-}
-
-header .header-all .header-logo .logo img {
-    width: 100%;
+.header-logo img {
+    width: 40%;
     padding-bottom: 15px;
     padding-top: 15px;
 }
 
-header .header-menu {
-    flex-grow: 1;
-    align-items: center;
+.container-fluid{
+    text-align: center;
+}
+
+.collapse{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 
-header .header-menu .header-menu-drop {
-    flex-grow: 1;
-    display: block;
-}
-
-header .header-menu .header-menu-drop li:hover {
+.nav-item a:hover{
     color: #ff7b00;
-    transition: all 0.2s;
+    transition: all 0.5s;
 }
 
-header .header-menu .header-menu-drop nav {
-    display: block;
+.dropdown{
+    color: white;
+    font-size: 16px;
+    border: none;
 }
-
-header .header-menu .header-menu-drop ul {
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    display: flex;
-    /* display: none; */
-    list-style: none;
+.dropdown-toggle{
+    color: white;
+    font-size: 16px;
+    border: none;
 }
-
-header .header-menu .header-menu-drop li {
-    display: inline-block;
-    padding: 41px 9px 41px 0;
-}
-
-header .header-menu .header-menu-drop li a {
-    color: var(--heading);
-    font-weight: 600;
-    line-height: 18.88px;
-    padding-right: 21px;
-    padding-left: 15px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-header .header-menu .header-menu-drop li a i {
-    padding-left: 13px;
-    padding-right: 5px;
-}
-
-.dropbtn{
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
+.dropdown-menu{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
-.dropdown-content a {
-    color: black !important;
+.dropdown-menu li a{
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 15px;
 }
-
-.dropdown-content a:hover {
-    color: #ff7b00 !important;
-    transition: all 0.2s;
-    background-color: #f1f1f1
+.dropdown-menu li a:hover{
+    background-color: #ddd;
 }
-
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-menu{
     display: block;
-}
-
-.serch-btn a i:hover{
-    color: #ff7b00;
-    transition: all 0.2s;
-}
-
-.bar {
-    margin-left: 20px;
-    display: none;
-}
-
-.bar i:hover{
-    color: #ff7b00;
-    transition: all 0.2s;
 }
 
 /* home page */
@@ -173,6 +85,7 @@ header .header-menu .header-menu-drop li a i {
 }
 .home-img{
     margin: 15% 0 0 0;
+    text-align: center;
 }
 .home-img img{
     width: 65%;
@@ -207,6 +120,12 @@ header .header-menu .header-menu-drop li a i {
     letter-spacing: 3px;
 }
 
+.about-col-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .about-img img{
     width: 58%;
     aspect-ratio: 3/3;
@@ -218,8 +137,9 @@ header .header-menu .header-menu-drop li a i {
 .about-table{
     border: 3px double;
     border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.073);
     background-image: url(../img/aboutimputbg.jpg);
-    box-shadow: 15px 15px 20px -4px  #a29898
+    box-shadow: 15px 15px 20px -4px  #a29898;
 }
 
 .about-data{
@@ -256,6 +176,8 @@ header .header-menu .header-menu-drop li a i {
     border-radius: 15px;
     overflow: hidden;
     height: 400px;
+    margin: 16px;
+    width: 18rem;
     box-shadow: 15px 15px 20px -4px  #bdbdbd
 }
 
@@ -308,7 +230,7 @@ header .header-menu .header-menu-drop li a i {
 
 .Contactpage{
     background-color: rgb(224, 224, 255);
-    height: 100vh;
+    height: 100%;
 }
 
 .content-title{
@@ -362,4 +284,7 @@ header .header-menu .header-menu-drop li a i {
 .content-input textarea{
     background: #f3f3f3;
     border: none;
+}
+.content-data{
+   padding: 48px; 
 }
