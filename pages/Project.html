@@ -18,57 +18,92 @@
   </head>
   <body>
     <div class="Projectpage">
-        <header class="container">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand header-logo"><img src="../img/Portfoliologo.png" alt=""></a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse col-8" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item px-3">
-                    <a class="nav-link" aria-current="page" href="./Home.html"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="./About.html">About</a>
-                  </li>
-                  <li class="nav-item dropdown px-3">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="./Project.html"
-                    >
-                    Project
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" data-category="all" href="#">All App</a></li>
-                      <li>
-                        <a class="dropdown-item" data-category="web-design" href="#">Mobile App</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" data-category="mobile app" href="#">Web App</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a class="nav-link" href="./Contact.html">Contact</a>
-                  </li>
-                </ul>
-                </form>
-              </div>
+      <header class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand header-logo"
+              ><img src="../img/Portfoliologo.png" alt=""
+            /></a>
+            <button class="navbar-toggler" type="button" id="sidebarToggleBtn">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse col-8"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item px-3">
+                  <a class="nav-link" aria-current="page" href="./Home.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="./About.html">About</a>
+                </li>
+                <li class="nav-item dropdown px-3">
+                  <a class="nav-link dropdown-toggle" href="./Project.html"
+                    >Project</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./Project.html">All App</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./Project.html"
+                        >Mobile App</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./Project.html">Web App</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="./Contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
-          </nav>
-        </header>
+          </div>
+        </nav>
+      </header>
+      <div class="sidebar" id="sidebar">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li>
+            <a class="navbar-brand header-logo"
+              ><img src="../img/Portfoliologo.png" alt=""
+            /></a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" aria-current="page" href="./Home.html">Home</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="./About.html">About</a>
+          </li>
+          <li class="nav-item dropdown px-3">
+            <a class="nav-link dropdown-toggle text-black" href="#">Project</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" data-category="all"
+                  >All App</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-category="web-design"
+                  >Mobile App</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-category="mobile app"
+                  >Web App</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="./Contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
       <div class="container">
         <div class="row" id="project-cards">
           <div class="col-4 project-col">
@@ -240,6 +275,14 @@
           }
         });
       }
+    });
+  </script>
+  <script>
+    var sidebar = document.getElementById("sidebar");
+    var sidebarToggleBtn = document.getElementById("sidebarToggleBtn");
+
+    sidebarToggleBtn.addEventListener("click", function () {
+      sidebar.classList.toggle("show");
     });
   </script>
 </html>

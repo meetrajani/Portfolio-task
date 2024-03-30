@@ -1,23 +1,44 @@
 @media (max-width: 1440px){
+    .homepage{
+        height: 100%;
+    }
     .home-img img{
         width: 50%;
+    }
+    .Aboutpage{
+        height: 100%;
+    }
+    .about-table{
+        width: 85%;
     }
 }
 
 @media (max-width: 1025px){
+    .homepage{
+        height: 100%;
+    }
+    .home-img{
+        margin: 20% 0 0 0;
+    }
     .home-img img{
-        width: 69%;
+        width: 60%;
     }
     /* about */
     .about-col-img{
         display: flex !important;
         justify-content: space-around !important;
     }
+    .about-body p{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 992px) {
     .homepage{
         height: 100%;
+    }
+    .home-img{
+        margin: 15% 0 0 0;
     }
 
     /* about */
@@ -40,15 +61,31 @@
         text-align: end;
     }
     .homepage{
-        height: 100vh;
+        height: 100%;
     }
     .container-fluid{
         text-align: left;
         display: inline !important;
     }
 
+    .navbar-collapse{
+        width: 100% !important;
+    }
+    .nevbar-item a{
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
     .collapse{
         display: block;
+    }
+
+    .sidebar .navbar-brand{
+        padding-left: 5%;
+    }
+
+    .sidebar .navbar-brand img{
+        width: 50%;
     }
 
     .data {
@@ -87,6 +124,8 @@
         width: 75% !important;
         padding-top: 5%;
         padding-bottom: 5%;
+        display: flex !important;
+        justify-content: space-around;
     }
 
     /* Project */
@@ -124,6 +163,10 @@
 
     .homepage{
         height: 100%;
+    }
+
+    .home-img img{
+        width: 50% !important;
     }
 
     .header-logo img {
@@ -183,8 +226,16 @@
         width: 80%;
     }
 
-    .about-body p {
+    .about-head h3{
+        font-size: 20px;
+    }
+
+    .about-head p{
         font-size: 13px;
+    }
+
+    .about-body p {
+        font-size: 11px;
     }
 
     /* Project */
