@@ -40,9 +40,7 @@
                   <a class="nav-link" href="./About.html">About</a>
                 </li>
                 <li class="nav-item dropdown px-3">
-                  <a class="nav-link dropdown-toggle" href="./Project.html"
-                    >Project</a
-                  >
+                  <a class="nav-link dropdown-toggle" href="#">Project</a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="./Project.html">All App</a>
@@ -79,15 +77,20 @@
             <a class="nav-link" href="./About.html">About</a>
           </li>
           <li class="nav-item dropdown px-3">
-            <a class="nav-link dropdown-toggle text-black" href="#">Project</a>
-            <ul class="dropdown-menu">
+            <a
+              class="nav-link dropdown-toggle text-black"
+              id="dropdownBtn"
+              href="#"
+              >Project</a
+            >
+            <ul class="dropdown-menu" id="dropdownContent">
               <li>
                 <a class="dropdown-item" href="./Project.html">All App</a>
               </li>
               <li>
                 <a class="dropdown-item" href="./Project.html">Mobile App</a>
               </li>
-              <li>
+              <li class="web-app">
                 <a class="dropdown-item" href="./Project.html">Web App</a>
               </li>
             </ul>
@@ -153,6 +156,26 @@
 
     sidebarToggleBtn.addEventListener("click", function () {
       sidebar.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function (event) {
+      var isClickInside =
+        sidebar.contains(event.target) ||
+        sidebarToggleBtn.contains(event.target);
+      if (!isClickInside && sidebar.classList.contains("show")) {
+        sidebar.classList.remove("show");
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dropdownBtn = document.getElementById("dropdownBtn");
+      var dropdownContent = document.getElementById("dropdownContent");
+
+      dropdownBtn.addEventListener("click", function () {
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
     });
   </script>
 </html>

@@ -42,9 +42,7 @@
                   <a class="nav-link" href="./About.html">About</a>
                 </li>
                 <li class="nav-item dropdown px-3">
-                  <a class="nav-link dropdown-toggle" href="./Project.html"
-                    >Project</a
-                  >
+                  <a class="nav-link dropdown-toggle" href="#">Project</a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="./Project.html">All App</a>
@@ -55,7 +53,9 @@
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./Project.html">Web App</a>
+                      <a class="dropdown-item web-app" href="./Project.html"
+                        >Web App</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -84,15 +84,20 @@
             <a class="nav-link" href="./About.html">About</a>
           </li>
           <li class="nav-item dropdown px-3">
-            <a class="nav-link dropdown-toggle text-black" href="#">Project</a>
-            <ul class="dropdown-menu">
+            <a
+              class="nav-link dropdown-toggle text-black"
+              id="dropdownBtn"
+              href="#"
+              >Project</a
+            >
+            <ul class="dropdown-menu dropdown-tar" id="dropdownContent">
               <li>
                 <a class="dropdown-item" href="./Project.html">All App</a>
               </li>
               <li>
                 <a class="dropdown-item" href="./Project.html">Mobile App</a>
               </li>
-              <li>
+              <li class="web-app">
                 <a class="dropdown-item" href="./Project.html">Web App</a>
               </li>
             </ul>
@@ -110,14 +115,14 @@
           <div class="col-6 home-col-data">
             <div class="data">
               <h2 class="home-name">
-                Hi There <br />I'm Jigar <span>Sable</span>
+                Hi There <br />I'm Meet <span>Rajani</span>
               </h2>
               <p class="home-about">
                 I Am
                 <span
                   class="typer"
                   id="main"
-                  data-words="Front-End Developer,Web development,Android developer"
+                  data-words="Front-End Developer,Web development"
                   data-delay="100"
                   data-deleteDelay="1000"
                 ></span>
@@ -156,6 +161,26 @@
 
     sidebarToggleBtn.addEventListener("click", function () {
       sidebar.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function (event) {
+      var isClickInside =
+        sidebar.contains(event.target) ||
+        sidebarToggleBtn.contains(event.target);
+      if (!isClickInside && sidebar.classList.contains("show")) {
+        sidebar.classList.remove("show");
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dropdownBtn = document.getElementById("dropdownBtn");
+      var dropdownContent = document.getElementById("dropdownContent");
+
+      dropdownBtn.addEventListener("click", function () {
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
     });
   </script>
   <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
